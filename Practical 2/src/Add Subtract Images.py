@@ -27,7 +27,7 @@ img_star = cv2.imread('../data/star.png')
 # cv2.imshow("division sup", img_div)
 #
 # image scaling
-img_cameraman = cv2.imread('../data/cameraman.jpg', 0+)
+img_cameraman = cv2.imread('../data/cameraman.jpg', 0)
 
 img_mul = cv2.multiply(img_cameraman, 2)
 img_div = cv2.multiply(img_cameraman, 0.5)
