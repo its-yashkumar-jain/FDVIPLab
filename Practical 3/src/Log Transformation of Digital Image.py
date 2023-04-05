@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-bw_image = cv2.imread("../data/cameraman.jpg")
+bw_image = cv2.imread("data/cameraman.jpg")
 cv2.imshow("BW", bw_image)
 
 c = 255 / (np.log(1 + bw_image.max()))

@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Read the image in greyscale
-img = cv2.imread('../data/coin.jpg', 0)
+img = cv2.imread('data/coin.jpg', 0)
 
 # Iterate over each pixel and change pixel value to binary using np.binary_repr() and store it in a list.
 lst = []
