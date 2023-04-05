@@ -32,7 +32,7 @@ cv2.imshow("erode5 image",erosion5)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-img=cv2.imread('Practical 5\eight.jpg',0)
+img=cv2.imread('Practical 5\h5.jpg',0)
 img = cv2.resize(img, (256, 256))
 cv2.imshow('input',img)
 cv2.waitKey(0)
@@ -42,3 +42,12 @@ cv2.waitKey(0)
 binr=cv2.threshold(img,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)[1]
 #define the kernel
 kernel=np.ones((3,3),np.uint8)
+#opening the image
+opening=cv2.morphologyEx(binr,cv2.MORPH_OPEN,kernel,iterations=30)
+cv2.imshow('opening done',opening)
+cv2.waitKey(0)
+
+closing=cv2.morphologyEx(binr,cv2.MORPH_CLOSE,kernel,iterations=25)
+cv2.imshow('closing done',closing)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
