@@ -1,9 +1,9 @@
 import cv2
 import numpy as np
-#horizontal lines
+#Horizontal lines
 img=cv2.imread('Practical 5\lines.png',0)
 cv2.imshow('orginal',img)
-kernel=np.ones((2,19),np.uint8)
+kernel=np.ones((2,16),np.uint8)
 horizontal_lines=cv2.erode(img,kernel,iterations=1)
 cv2.imshow("output",horizontal_lines)
 cv2.waitKey(0)
